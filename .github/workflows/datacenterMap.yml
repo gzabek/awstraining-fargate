@@ -45,7 +45,7 @@ jobs:
               "BACKEND_EMEA_TEST": {
                  "HUB": "EMEA",
                  "STAGE": "TEST",
-                 "AWS_ACCOUNT": "<<ACCOUNT_ID>>",
+                 "AWS_ACCOUNT": "063814393886",
                  "PROFILE": "backend-test",
                  "REGION": "eu-central-1",
                  "CLUSTER_NAME": "backend-ecs-test",
@@ -55,7 +55,7 @@ jobs:
               "BACKEND_US_TEST": {
                  "HUB": "US",
                  "STAGE": "TEST",
-                 "AWS_ACCOUNT": "<<ACCOUNT_ID>>",
+                 "AWS_ACCOUNT": "063814393886",
                  "PROFILE": "backend-test",
                  "REGION": "us-east-1",
                  "CLUSTER_NAME": "backend-ecs-test",
