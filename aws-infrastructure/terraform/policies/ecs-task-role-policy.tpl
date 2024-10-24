@@ -37,7 +37,12 @@ ${jsonencode(
          "Effect": "Allow",
          "Action": "sns:Publish",
           "Resource": "*"
-        }
+        },
+            {
+                 "Effect": "Allow",
+                 "Action": "translate:TranslateText",
+                 "Resource": "*"
+                }
   ]
 }
 )
