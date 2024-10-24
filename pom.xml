@@ -161,6 +161,16 @@
                 <artifactId>aws-java-sdk-sts</artifactId>
                 <version>${aws-java-sdk.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-translate</artifactId>
+                <version>${aws-java-sdk.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-comprehend</artifactId>
+                <version>${aws-java-sdk.version}</version>
+            </dependency>
             <!-- Swagger Stuff -->
             <dependency>
                 <groupId>io.swagger.core.v3</groupId>

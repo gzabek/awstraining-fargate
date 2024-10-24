@@ -1,8 +1,5 @@
 package com.awstraining.backend.config;
 
-import static com.awstraining.backend.users.Users.USER;
-import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
-
 import com.awstraining.backend.users.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -13,6 +10,9 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+
+import static com.awstraining.backend.users.Users.USER;
+import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
 /**
  * Configuration of basic security features like turning on the HTTP basic authentication.

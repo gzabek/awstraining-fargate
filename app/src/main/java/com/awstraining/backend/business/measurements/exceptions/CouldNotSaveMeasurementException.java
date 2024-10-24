@@ -1,13 +1,13 @@
 package com.awstraining.backend.business.measurements.exceptions;
 
-import static java.lang.System.currentTimeMillis;
-import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
-import static org.springframework.http.ResponseEntity.status;
+import com.awstraining.backend.api.rest.v1.model.ApiBusinessErrorResponse;
+import org.springframework.http.ResponseEntity;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.awstraining.backend.api.rest.v1.model.ApiBusinessErrorResponse;
-import org.springframework.http.ResponseEntity;
+import static java.lang.System.currentTimeMillis;
+import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
+import static org.springframework.http.ResponseEntity.status;
 
 public class CouldNotSaveMeasurementException extends RuntimeException {
     public ResponseEntity<ApiBusinessErrorResponse> toResponse(final HttpServletRequest request) {

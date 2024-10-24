@@ -1,14 +1,14 @@
 package com.awstraining.backend.business.measurements.exceptions;
 
-import static org.springframework.core.Ordered.HIGHEST_PRECEDENCE;
-
-import javax.servlet.http.HttpServletRequest;
-
 import com.awstraining.backend.api.rest.v1.model.ApiBusinessErrorResponse;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+
+import javax.servlet.http.HttpServletRequest;
+
+import static org.springframework.core.Ordered.HIGHEST_PRECEDENCE;
 
 @Order(HIGHEST_PRECEDENCE)
 @ControllerAdvice

@@ -1,12 +1,12 @@
 package com.awstraining.backend.business.measurements;
 
-import java.util.List;
-
 import com.awstraining.backend.business.measurements.exceptions.CouldNotSaveMeasurementException;
 import com.awstraining.backend.business.measurements.repository.MeasurementDBEntity;
 import com.awstraining.backend.business.measurements.repository.MeasurementRepositoryDynamoDB;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class MeasurementService {

@@ -17,8 +17,6 @@ on:
         options:
           - 'ecs'
           - 'eks'
-
-
 jobs:
   properties:
     uses: ./.github/workflows/datacenterMap.yml
@@ -35,7 +33,6 @@ jobs:
       AWS_KEY:  ${{ secrets[format('{0}_AWS_KEY', inputs.hubEnv)] }}
       AWS_SECRET: ${{ secrets[format('{0}_AWS_SECRET', inputs.hubEnv)] }}
       AWS_REGION: ${{ needs.properties.outputs.REGION }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v3

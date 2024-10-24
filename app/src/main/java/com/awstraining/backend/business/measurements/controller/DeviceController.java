@@ -1,9 +1,5 @@
 package com.awstraining.backend.business.measurements.controller;
 
-import static java.lang.System.currentTimeMillis;
-
-import java.util.List;
-
 import com.awstraining.backend.api.rest.v1.DeviceIdApi;
 import com.awstraining.backend.api.rest.v1.model.Measurement;
 import com.awstraining.backend.api.rest.v1.model.Measurements;
@@ -15,6 +11,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+import static java.lang.System.currentTimeMillis;
 
 @RestController
 @RequestMapping("device/v1")

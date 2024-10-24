@@ -224,7 +224,105 @@
           }
         ]
       }
+    },
+    "/notifyMe": {
+      "post": {
+        "tags": [
+          "notifyme"
+        ],
+        "summary": "Send the message to SNS Topic",
+        "description": "Send the message to SNS Topic",
+        "operationId": "notifyMe",
+        "responses": {
+          "201": {
+            "description": "Message published to topic.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SentMessage"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiBusinessErrorResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden."
+          },
+          "404": {
+            "description": "Resource not available."
+          },
+          "422": {
+            "description": "Request timed out. One of the backend services took too long to process request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiBusinessErrorResponse"
+                }
+              }
+            }
+          },
+          "429": {
+            "description": "Too many requests for same device.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiBusinessErrorResponse"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiServerErrorResponse"
+                }
+              }
+            }
+          },
+          "503": {
+            "description": "Service unavailable",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ApiServerErrorResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "description": "NotifyMe text",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NotifyMe"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "basicAuth":[]
+          }
+        ]
+      }
     }
+
   },
   "components": {
     "schemas": {
@@ -386,6 +484,44 @@
             "type": "string",
             "description": "Type of the given measurement",
             "example": "cpu"
+          }
+        }
+      },
+      "NotifyMe": {
+        "type": "object",
+        "description": "Represents the message",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "source_lc": {
+            "type": "string",
+            "example": "pl",
+            "description": "Contains the language code of source"
+          },
+          "target_lc": {
+            "type": "string",
+            "example": "en",
+            "description": "Contains the language code of target"
+          },
+          "text": {
+            "type": "string",
+            "description": "Text to send",
+            "example": "cpu"
+          }
+        }
+      },
+      "SentMessage": {
+        "type": "object",
+        "description": "Represents the message",
+        "required": [
+          "text"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "description": "Sent message",
+            "example": "Kra kre mija, tu lis ma nore, a ja nos tre."
           }
         }
       }

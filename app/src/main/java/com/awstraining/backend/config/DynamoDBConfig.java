@@ -26,10 +26,10 @@ public class DynamoDBConfig {
     @Value("${aws.dynamodb.endpoint:#{null}}")
     private String dynamodbEndpoint;
 
-    @Value("${aws.dynamodb.accessKey:#{null}}")
+    @Value("${aws.accessKey:#{null}}")
     private String dynamodbAccessKey;
 
-    @Value("${aws.dynamodb.secretKey:#{null}}")
+    @Value("${aws.secretKey:#{null}}")
     private String dynamodbSecretKey;
 
     @Bean

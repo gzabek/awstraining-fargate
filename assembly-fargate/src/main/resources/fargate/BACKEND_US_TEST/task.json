@@ -40,7 +40,7 @@
       ],
       "secrets": [
         {
-          "valueFrom": "<<TODO: set ARN of US secrets manager>>",
+          "valueFrom": "<<TODO: set ARN of secrets manager>>",
           "name": "SPRING_APPLICATION_JSON"
         }
       ],
